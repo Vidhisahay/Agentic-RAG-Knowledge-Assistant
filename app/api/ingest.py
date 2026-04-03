@@ -1,5 +1,5 @@
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 from app.rag.chunker import chunk_text
 from app.rag.embedder import get_embeddings
 from app.rag.retriever import build_index
