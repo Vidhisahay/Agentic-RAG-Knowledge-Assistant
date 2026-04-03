@@ -1,0 +1,19 @@
+# Environment
+.env
+
+# FAISS index (local only, regenerated on ingest)
+faiss_index.bin
+chunks.pkl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Anaconda / venv
+.venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
