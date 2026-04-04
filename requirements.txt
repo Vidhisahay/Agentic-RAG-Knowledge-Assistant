@@ -10,4 +10,4 @@ asyncpg
 psycopg2-binary
 python-dotenv
 tiktoken
-pypdf2
+pypdf
