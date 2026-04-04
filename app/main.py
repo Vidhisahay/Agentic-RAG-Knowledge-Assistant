@@ -4,19 +4,16 @@ from app.api import ingest, query
 from app.rag.retriever import load_index
 from app.db.logger import engine
 from app.db.models import Base
-from app.rag.retriever import index as faiss_index
 
 Base.metadata.create_all(bind=engine)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup
     load_index()
     print("FAISS index loaded")
     print("Database ready")
     print("Agentic RAG Assistant is running")
     yield
-    # Shutdown (nothing to clean up for now)
 
 app = FastAPI(
     title="Agentic RAG Assistant",
@@ -34,9 +31,9 @@ async def root():
 
 @app.get("/health", tags=["Health"])
 async def health():
+    from app.rag.retriever import index as faiss_index
     return {
         "api": "healthy",
         "index_loaded": faiss_index is not None,
-        "note": "Re-ingest documents after each deploy",
         "docs": "/docs"
     }
