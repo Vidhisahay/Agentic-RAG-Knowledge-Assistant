@@ -2,12 +2,14 @@ fastapi
 uvicorn[standard]
 python-multipart
 openai
+groq
 faiss-cpu
 sentence-transformers
+pypdf
 redis
 sqlalchemy
-asyncpg
 psycopg2-binary
 python-dotenv
 tiktoken
-pypdf
+pytest
+httpx
