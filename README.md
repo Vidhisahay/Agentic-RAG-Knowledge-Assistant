@@ -256,9 +256,8 @@ tests/test_query.py::test_cache_hit              PASSED
  
 Deployed on **Render** - API + Redis + PostgreSQL.
  
-- Live API: https://agentic-rag-assistant.onrender.com
-- Swagger Docs: https://agentic-rag-assistant.onrender.com/docs
- 
+- Live API: https://agentic-rag-knowledge-assistant.onrender.com/
+- Swagger Docs: https://agentic-rag-knowledge-assistant.onrender.com/docs
 > Note: FAISS index is in-memory. Re-ingest documents after each cold start.
 
 ## Future Improvements
